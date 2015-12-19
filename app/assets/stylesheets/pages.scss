@@ -1,0 +1,18 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.alert {
+	position: absolute;
+/*	z-index: 1;*/
+	width: 300px;
+	right: 40%;
+}
+
+.logo {
+	max-width: 150px;
+}
+
+.dashboard {
+	margin: 60px;
+}

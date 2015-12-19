@@ -1,0 +1,38 @@
+<%= simple_form_for(@post) do |f| %>
+<div class="message">
+<%= f.error_notification %>
+</div>
+
+	<div class="row">
+		<div class="col-md-4">
+			<div class="form-inputs">
+				<% if current_user.connections.where(provider: "facebook").any? %>
+				<%= f.input :facebook %>
+				<% end %>
+				<% if current_user.connections.where(provider: "twitter").any? %>
+				<%= f.input :twitter %>
+				<% end %>
+
+			<p> This post will be scheduled in <b><%= Time.zone.name %></b> time</p>
+				<%=f.input :scheduled_at, required: true, as: :datetime_picker %>
+			</div>
+
+			<div class="col-md-2">
+			</div>
+
+		</div>
+
+		<div class="col-md-6">
+			<div class="form-inputs">
+				<%= f.input :content, required: true, maxlength: 140, placeholder: 'Write your post here' %>
+			</div>
+		<br>
+		<br>
+
+		<div class="form-actions">
+			<%= f.button :submit, class: "btn btn-success btn-lg"%>
+		</div>
+	</div>
+</div>
+
+<% end %>

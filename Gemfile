@@ -1,5 +1,19 @@
 source 'https://rubygems.org'
 
+gem 'devise', '~> 3.4.0'
+gem 'simple_form'
+gem "font-awesome-rails"
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem 'dotenv-rails', groups: [:development]
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+gem 'validates_timeliness','~> 3.0'
+gem 'momentjs-rails','~> 2.9', github:'derekprior/momentjs-rails'
+gem 'datetimepicker-rails', github:'zpaulovics/datetimepicker-rails', branch:'master', submodules: true
+gem 'twitter'
+gem 'koala'
+gem 'delayed_job_active_record'
+gem 'delayed-web', github: 'thebestday/delayed-web'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
